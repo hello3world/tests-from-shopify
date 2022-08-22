@@ -1,0 +1,204 @@
+/*****COMMON PROPERTIES*****/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  box-sizing: border-box;
+  font: 16px/1.5 Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  text-align: left;
+  background: rgba(246, 246, 246, 1);
+}
+
+.container {
+  max-width: 1920px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/*****SECTION PRODUCTSOFWEEK*****/
+.productsOfWeek {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.productsOfWeek__title {
+  margin-bottom: 40px;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.productsOfWeek__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.productsOfWeek__item {
+  display: flex;
+  flex-direction: column;
+  max-width: 33%;
+  min-width: 307px;
+  box-shadow: 0 0 23px rgba(0, 0, 0, 0.15);
+  border-radius: 10px 10px 0 0;
+  background: white;
+}
+
+.productsOfWeek__item:nth-child(3) {
+  margin-right: 0px;
+}
+
+.productsOfWeek__top {
+  position: relative;
+}
+
+.productsOfWeek__top--new::before {
+  content: "НОВИНКА";
+  position: absolute;
+  height: 24px;
+  width: 110px;
+  left: 17px;
+  top: 15px;
+  text-align: center;
+  color: rgba(47, 47, 47, 1);
+  border-radius: 8px;
+  background: rgba(253, 207, 243, 1);
+}
+
+.productsOfWeek__top--last::after {
+  content: "ПОСЛЕДНИЙ";
+  position: absolute;
+  height: 24px;
+  width: 134px;
+  right: 102px;
+  top: 15px;
+  text-align: center;
+  color: rgba(47, 47, 47, 1);
+  border-radius: 8px;
+  background: rgba(255, 207, 86, 1);
+}
+
+.productsOfWeek__image {
+  max-width: 100%;
+  background-size: cover;
+  object-fit: contain;
+  vertical-align: top;
+  border-radius: 10px 10px 0 0;
+}
+
+.productsOfWeek__bottom {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: 24px;
+}
+
+.productsOfWeek__name {
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.5;
+}
+
+.productsOfWeek__description {
+  flex: 1 1 auto;
+  max-width: 332px;
+  margin-bottom: 5px;
+}
+
+.productsOfWeek__button {
+  height: 48px;
+  width: 100%;
+  margin-top: 18px;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.4;
+  letter-spacing: 0em;
+  text-align: center;
+  color: rgba(66, 148, 15, 1);
+  background: rgba(255, 255, 255, 1);
+  border-radius: 8px;
+  border: 3px solid rgba(66, 148, 15, 1);
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.productsOfWeek__button:hover {
+  color: white;
+  background-color: #42940F;
+  border-color: #42940F;
+}
+
+.productsOfWeek__button:active {
+  color: white;
+  background-color: #1F5200;
+  border-color: #1F5200;
+}
+
+.productsOfWeek__button--disabled {
+  color: white;
+  background-color: #4E4E4E;
+  border: 3px solid #4E4E4E;
+}
+
+.productsOfWeek__button--disabled:hover {
+  background-color: #4E4E4E;
+  border-color: #4E4E4E;
+  cursor: none;
+}
+
+/*****ADAPTIVE******/
+@media (max-width: 1210px) {
+
+  /*****SECTION PRODUCTSOFWEEK*****/
+  .productsOfWeek__list {
+    justify-content: center;
+    gap: 40px 20px;
+    margin-right: 0px;
+  }
+
+  .productsOfWeek__top--last::after {
+    right: 15px;
+    top: 15px;
+  }
+}
+
+@media (max-width: 960px) {
+
+  /*****COMMON PROPERTIES*****/
+  body {
+    font-size: 14px;
+  }
+
+  /*****SECTION PRODUCTSOFWEEK*****/
+  .productsOfWeek__title {
+    margin-bottom: 30px;
+  }
+
+  .productsOfWeek__button {
+    font-size: 16px;
+  }
+
+  .productsOfWeek__name {
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  /*****SECTION PRODUCTSOFWEEK*****/
+  .productsOfWeek__title {
+    font-size: 42px;
+    line-height: 1.2;
+  }
+}
